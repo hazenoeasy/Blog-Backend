@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import plus.yuhaozhang.blog.common.aop.Cache;
 import plus.yuhaozhang.blog.vo.params.ArticleParam;
 import plus.yuhaozhang.blog.vo.params.PageParams;
 import plus.yuhaozhang.blog.vo.Result;
@@ -35,6 +36,7 @@ public class ArticleController {
     }
 
     @GetMapping("new")
+    @Cache(name = "new_article")
     public Result getNewArticles(){
         return Result.success(articleService.getNewArticles());
     }
