@@ -12,7 +12,7 @@ import java.util.List;
  */
 @Data
 public class ArticleVo {
-    @JsonSerialize(using = ToStringSerializer.class)
+    //@JsonSerialize(using = ToStringSerializer.class)
     private Long id;
     private String title;
     private String summary;

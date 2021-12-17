@@ -78,6 +78,7 @@ public class CacheAspect {
                 return result;
             }
             Object proceed = pjp.proceed();
+            //proceed.
             redisTemplate.opsForValue().set(redisKey,JSON.toJSONString(proceed), Duration.ofMillis(expire));
             log.info("save in cache {},{}",className,methodName);
             return proceed;

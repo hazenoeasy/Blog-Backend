@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
  */
 @Data
 public class TagVo {
-    @JsonSerialize(using = ToStringSerializer.class)
+    //@JsonSerialize(using = ToStringSerializer.class)
     private Long id;
 
     private String avatar;

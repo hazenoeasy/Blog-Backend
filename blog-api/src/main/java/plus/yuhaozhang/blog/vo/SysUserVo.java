@@ -15,6 +15,6 @@ public class SysUserVo {
 
     private String avatar;
     
-    @JsonSerialize(using = ToStringSerializer.class)
+    //@JsonSerialize(using = ToStringSerializer.class)
     private Long id;
 }

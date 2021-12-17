@@ -26,6 +26,7 @@ public class ArticleController {
      * @return
      */
     @PostMapping
+    @Cache(name = "list_article")
     public Result listArticle(@RequestBody PageParams pageParams){
         return Result.success(articleService.listArticle(pageParams));
     }
